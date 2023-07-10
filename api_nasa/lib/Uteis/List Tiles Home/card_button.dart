@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import '../Color Palette/color_palette.dart';
 
 class ButtonCard extends StatelessWidget {
@@ -10,22 +10,36 @@ class ButtonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 60,
-      child: Card(
-        color: ColorPalette.lavender,
-        elevation: 5,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        child: Center(
-          child: ListTile(
-            leading: Image.asset(
-              image,
-              scale: 15,
-            ),
-            title: Text(title),
-            onTap: () {},
+      width: MediaQuery.of(context).size.width - 150,
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              ColorPalette.lightViolet,
+              ColorPalette.violet,
+              ColorPalette.darkViolet
+            ],
           ),
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              image,
+              scale: 5,
+            ),
+            const SizedBox(height: 10),
+            Text(
+              title,
+              style: GoogleFonts.openSans(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white),
+            ),
+          ],
         ),
       ),
     );

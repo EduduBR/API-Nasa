@@ -14,6 +14,8 @@ abstract class ColorPalette {
   static const Color golden = Color(0xFFaf9637);
   static const Color darkGrey = Color(0xFF202020);
   static const Color lightGrey = Color(0xFF4d4d4d);
+  static const Color lightViolet = Color(0xFFca99fb);
+  static const Color darkViolet = Color(0xFF4626d0);
 
   static const List<Color> galaxy = [
     black,
@@ -25,6 +27,6 @@ abstract class ColorPalette {
     black
   ];
 
-  static const List<Color> lightGalaxy = [black,lightGrey, darkGrey, golden];
+  static const List<Color> lightGalaxy = [black, lightGrey, darkGrey, golden];
   static const List<Color> darkGalaxy = [black, darkGrey, black];
 }
