@@ -1,7 +1,7 @@
-import 'package:api_nasa/View/Home/Screen/drawer.dart';
+import 'package:api_nasa/Model/Move/movement.dart';
+import 'package:api_nasa/View/Home/Screen/homepage.dart';
 import 'package:flutter/material.dart';
-
-import 'View/Home/Screen/homepage.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,13 +10,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-debugShowCheckedModeBanner: false,
-      
-      home: HomePage()
+    return Provider(
+      create: (context) => Movement(),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomePage()
+      ),
     );
   }
 }

@@ -38,7 +38,10 @@ dependencies:
   lottie: ^2.3.2
   carousel_slider: ^4.2.1
   google_fonts: ^4.0.4
-
+  dio: ^5.3.0
+  provider: ^6.0.5
+  cached_network_image: ^3.1.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -63,15 +66,39 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/logo.json
-    - assets/telescopio.png
-    - assets/planeta-terra.png
-    - assets/mars-rover.png
-    - assets/satelite.png
-    - assets/marte.png
-    - assets/lua.png
-    - assets/luacheia.png
-    - assets/foguete.json
+   - assets/icons/explosao.png
+   - assets/icons/jupiter.png
+   - assets/icons/lua.png
+   - assets/icons/luacheia.png
+   - assets/icons/mars-rover.png
+   - assets/icons/marte.png
+   - assets/icons/mercurio.png
+   - assets/icons/netuno.png
+   - assets/icons/satelite.png
+   - assets/icons/saturno.png
+   - assets/icons/sol.png
+   - assets/icons/telescopio.png
+   - assets/icons/terra.png
+   - assets/icons/urano.png
+   - assets/icons/venus.png
+   
+   - assets/animed/galaxy.json
+   - assets/animed/loading.json
+   - assets/animed/logo.json
+
+   - assets/image_planet/earth.jpg
+   - assets/image_planet/jupiter.jpg
+   - assets/image_planet/mars.jpg
+   - assets/image_planet/mercury.jpg
+   - assets/image_planet/neptune.jpg
+   - assets/image_planet/saturn.jpg
+   - assets/image_planet/sun.jpg
+   - assets/image_planet/uranus.jpg
+   - assets/image_planet/venus.jpg
+
+   - assets/terra.jpg
+   
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

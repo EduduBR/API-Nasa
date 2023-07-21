@@ -10,23 +10,37 @@ abstract class ColorPalette {
   static const Color violet = Color(0xFF6842ec);
   static const Color lavender = Color(0xFFe5e6ff);
   static const Color ivory = Color(0xFFFFFFF0);
-  static const Color grey = Color(0xFFbccdf9);
+  static const Color darkLavander = Color(0XFFafb2ec);
   static const Color golden = Color(0xFFaf9637);
   static const Color darkGrey = Color(0xFF202020);
   static const Color lightGrey = Color(0xFF4d4d4d);
   static const Color lightViolet = Color(0xFFca99fb);
   static const Color darkViolet = Color(0xFF4626d0);
+  static const Color orange = Color(0XFFfed279);
+  static const Color darkOrange = Color(0xFFfba723);
+  static const Color lightbrown = Color(0xFFe9ad64);
+static const Color green = Color(0xFF7ee168);
+static const Color red = Color(0xFF990502);
+static const Color darkbrown = Color(0xFF7c4800);
+static const Color blueOpaco = Color(0xFF2a4688);
+
+
+
+
+
+
+
+
+
+
+
 
   static const List<Color> galaxy = [
     black,
     darkPurple,
     wine,
-    // violet,
     darkBlue,
     darkPurple,
     black
   ];
-
-  static const List<Color> lightGalaxy = [black, lightGrey, darkGrey, golden];
-  static const List<Color> darkGalaxy = [black, darkGrey, black];
 }

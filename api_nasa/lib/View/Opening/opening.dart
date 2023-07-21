@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-
 import '../../Uteis/Color Palette/color_palette.dart';
 
 class Opening extends StatefulWidget {

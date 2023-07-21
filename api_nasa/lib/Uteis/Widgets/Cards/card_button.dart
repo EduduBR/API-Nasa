@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../Color Palette/color_palette.dart';
+import '../../Color Palette/color_palette.dart';
 
 class ButtonCard extends StatelessWidget {
   final String image;
