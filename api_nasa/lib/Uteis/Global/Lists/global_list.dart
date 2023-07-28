@@ -1,40 +1,38 @@
 import 'package:api_nasa/Uteis/Color%20Palette/color_palette.dart';
-import 'package:api_nasa/Uteis/Widgets/Cards/card_button.dart';
+import 'package:api_nasa/Widgets/Cards/carousel_card.dart';
 import 'package:api_nasa/View/Info/Screen/info.dart';
 
-
-import '../../Widgets/card_button_grid.dart';
+import '../../../Widgets/Cards/grid_card.dart';
 
 class GlobalList {
-  static List<ButtonCardGrid> listAPI = [
-    const ButtonCardGrid(
+  static List<GridCard> listAPI = [
+    const GridCard(
         image: 'assets/icons/telescopio.png',
         title: 'Imagem Astronômica do dia'),
-    const ButtonCardGrid(
+    const GridCard(
         image: 'assets/icons/terra.png',
         title: 'Imagem policromática da Terra'),
-    const ButtonCardGrid(
+    const GridCard(
         image: 'assets/icons/marte.png',
         title: 'Serviço meteorológico de Marte'),
-    const ButtonCardGrid(
+    const GridCard(
         image: 'assets/icons/mars-rover.png', title: 'Fotos do Mars Rover'),
-    const ButtonCardGrid(
+    const GridCard(
         image: 'assets/icons/satelite.png',
         title: 'Objetos em órbita terrestre'),
-    const ButtonCardGrid(
-        image: 'assets/icons/explosao.png', title: 'Explosão Solar')
+    const GridCard(image: 'assets/icons/explosao.png', title: 'Explosão Solar')
   ];
 
-  static List<ButtonCard> listCarrosel = [
-    const ButtonCard(image: 'assets/icons/sol.png', title: 'Sol'),
-    const ButtonCard(image: 'assets/icons/mercurio.png', title: 'Mercúrio'),
-    const ButtonCard(image: 'assets/icons/venus.png', title: 'Vênus'),
-    const ButtonCard(image: 'assets/icons/terra.png', title: 'Terra'),
-    const ButtonCard(image: 'assets/icons/marte.png', title: 'Marte'),
-    const ButtonCard(image: 'assets/icons/jupiter.png', title: 'Júpiter'),
-    const ButtonCard(image: 'assets/icons/saturno.png', title: 'Saturno'),
-    const ButtonCard(image: 'assets/icons/urano.png', title: 'Urano'),
-    const ButtonCard(image: 'assets/icons/netuno.png', title: 'Netuno')
+  static List<CarouselCard> listCarrosel = [
+    const CarouselCard(image: 'assets/icons/sol.png', title: 'Sol'),
+    const CarouselCard(image: 'assets/icons/mercurio.png', title: 'Mercúrio'),
+    const CarouselCard(image: 'assets/icons/venus.png', title: 'Vênus'),
+    const CarouselCard(image: 'assets/icons/terra.png', title: 'Terra'),
+    const CarouselCard(image: 'assets/icons/marte.png', title: 'Marte'),
+    const CarouselCard(image: 'assets/icons/jupiter.png', title: 'Júpiter'),
+    const CarouselCard(image: 'assets/icons/saturno.png', title: 'Saturno'),
+    const CarouselCard(image: 'assets/icons/urano.png', title: 'Urano'),
+    const CarouselCard(image: 'assets/icons/netuno.png', title: 'Netuno')
   ];
 
   static List<InfoLounge> infolounge = [
@@ -75,5 +73,5 @@ class GlobalList {
     )
   ];
 
-  static List<String> roverList = [];
+ 
 }

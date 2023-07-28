@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import '../Color Palette/color_palette.dart';
+import '../../Uteis/Color Palette/color_palette.dart';
 
-class ButtonCardGrid extends StatelessWidget {
+class GridCard extends StatelessWidget {
   final String image;
   final String title;
-  const ButtonCardGrid({super.key, required this.image, required this.title});
+  const GridCard({super.key, required this.image, required this.title});
 
   @override
   Widget build(BuildContext context) {

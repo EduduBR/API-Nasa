@@ -1,9 +1,7 @@
 import 'package:api_nasa/Model/Move/movement.dart';
-import 'package:api_nasa/Uteis/Color%20Palette/color_palette.dart';
 import 'package:api_nasa/View/Home/Screen/homepage.dart';
 import 'package:api_nasa/View/Info/Widgets/stream.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class InfoLounge extends StatefulWidget {
@@ -25,13 +23,10 @@ class _InfoLoungeState extends State<InfoLounge> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+          centerTitle: true,
           backgroundColor: widget.color,
-          title: Text(widget.title,
-              style: GoogleFonts.openSans(
-                  fontSize: 23,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white)),
+          title:
+              Text(widget.title, style: Theme.of(context).textTheme.bodyMedium),
           leading: IconButton(
               onPressed: () => Provider.of<Movement>(context, listen: false)
                   .navigateToPage(context, const HomePage()),
@@ -51,13 +46,10 @@ class _InfoLoungeState extends State<InfoLounge> {
                 borderRadius: BorderRadius.circular(30), color: widget.color),
             child: Padding(
               padding: const EdgeInsets.all(15),
-              child: 
-                  InfoStream(
-                    title: widget.title,
-                    id: widget.nameUrl,
-                  )
-              
-            
+              child: StreamData(
+                title: widget.title,
+                id: widget.nameUrl,
+              ),
             ),
           )
         ],

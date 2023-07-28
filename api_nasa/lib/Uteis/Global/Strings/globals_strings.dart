@@ -1,4 +1,4 @@
-class GlobalsString {
+class GlobString {
   static String name = '';
   static String moon = '';
   static String inclination = '';

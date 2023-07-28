@@ -1,9 +1,9 @@
 import 'dart:convert';
-
 import 'package:api_nasa/Uteis/Global/Strings/globals_strings.dart';
 import 'package:dio/dio.dart';
 
 abstract class CallApi {
+  //call to get information from the planets
   static void fetchData(streamController, id) async {
     var apiUrl = 'https://api.le-systeme-solaire.net/rest/bodies/$id';
 
@@ -23,8 +23,6 @@ abstract class CallApi {
         var escape = responseData['escape'];
         var luas = responseData['moons'];
 
-        print(responseData);
-
         if (luas != null) {
           List<String> nomesLuas = [];
 
@@ -32,28 +30,32 @@ abstract class CallApi {
             var nomeLua = lua['moon'];
             nomesLuas.add(nomeLua);
           }
-          var luasString =
-              nomesLuas.toString().replaceAll('[', '').replaceAll(']', '');
+          var luasString = nomesLuas
+              .toString()
+              .replaceAll('[', '')
+              .replaceAll(']', '')
+              .replaceAll('{', '')
+              .replaceAll('}', '');
 
-          GlobalsString.name = 'Nome: $name';
-          GlobalsString.moon = 'Luas: $luasString';
-          GlobalsString.inclination = 'Inclinação: $inclination';
-          GlobalsString.mass = 'Massa: $mass';
-          GlobalsString.vol = 'Volume: $vol';
-          GlobalsString.density = 'Densidade: $density';
-          GlobalsString.gravity = 'Gravidade: $gravity';
-          GlobalsString.escape = 'Escape: $escape';
+          GlobString.name = 'Nome: $name';
+          GlobString.moon = 'Luas: $luasString';
+          GlobString.inclination = 'Inclinação: $inclination';
+          GlobString.mass = 'Massa: $mass';
+          GlobString.vol = 'Volume: $vol';
+          GlobString.density = 'Densidade: $density';
+          GlobString.gravity = 'Gravidade: $gravity';
+          GlobString.escape = 'Escape: $escape';
           var jsonString = json.encode(responseData);
           streamController.add(jsonString);
         } else {
-          GlobalsString.name = 'Nome: $name';
-          GlobalsString.moon = 'Luas: Nenhuma';
-          GlobalsString.inclination = 'Inclinação: $inclination';
-          GlobalsString.mass = 'Massa: $mass';
-          GlobalsString.vol = 'Volume: $vol';
-          GlobalsString.density = 'Densidade: $density';
-          GlobalsString.gravity = 'Gravidade: $gravity';
-          GlobalsString.escape = 'Escape: $escape';
+          GlobString.name = 'Nome: $name';
+          GlobString.moon = 'Luas: Nenhuma';
+          GlobString.inclination = 'Inclinação: $inclination';
+          GlobString.mass = 'Massa: $mass';
+          GlobString.vol = 'Volume: $vol';
+          GlobString.density = 'Densidade: $density';
+          GlobString.gravity = 'Gravidade: $gravity';
+          GlobString.escape = 'Escape: $escape';
           var jsonString = json.encode(responseData);
           streamController.add(jsonString);
         }
@@ -65,10 +67,10 @@ abstract class CallApi {
     }
   }
 
+  //call get images from Mars rover
   static Future<List<String>> rover() async {
     const String baseUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/';
-    const String apiKey =
-        'nZxSB64O9wf6seWw3Nw1hIu0bCQgHT7wATA4ienH'; // Substitua pelo seu API Key da NASA
+    const String apiKey = 'nZxSB64O9wf6seWw3Nw1hIu0bCQgHT7wATA4ienH';
 
     Dio dio = Dio();
 
@@ -95,23 +97,19 @@ abstract class CallApi {
     }
 
     List<String> allImageUrls = [];
-
-    // Lista de abreviações das câmeras disponíveis
     List<String> cameras = ["CHEMCAM", "FHAZ", "MARDI", "RHAZ"];
 
     try {
-      // Iterar sobre cada câmera e obter as imagens
       for (var camera in cameras) {
         List<dynamic> photos =
             await getPhotosBySol('curiosity', 1000, camera: camera);
 
         for (var photo in photos) {
           String imageUrl = photo['img_src'];
+
           allImageUrls.add(imageUrl);
         }
       }
-
-      
     } catch (e) {
       print('Erro: $e');
     }

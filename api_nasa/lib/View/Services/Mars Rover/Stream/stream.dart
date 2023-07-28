@@ -45,8 +45,9 @@ class _RoverStreamState extends State<RoverStream> {
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            RoverCarrossel(list: imageUrls,)
-          
+            RoverCarrossel(
+              list: imageUrls,
+            )
           ],
         );
       },

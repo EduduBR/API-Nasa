@@ -19,21 +19,10 @@ abstract class ColorPalette {
   static const Color orange = Color(0XFFfed279);
   static const Color darkOrange = Color(0xFFfba723);
   static const Color lightbrown = Color(0xFFe9ad64);
-static const Color green = Color(0xFF7ee168);
-static const Color red = Color(0xFF990502);
-static const Color darkbrown = Color(0xFF7c4800);
-static const Color blueOpaco = Color(0xFF2a4688);
-
-
-
-
-
-
-
-
-
-
-
+  static const Color green = Color(0xFF7ee168);
+  static const Color red = Color(0xFF990502);
+  static const Color darkbrown = Color(0xFF7c4800);
+  static const Color blueOpaco = Color(0xFF2a4688);
 
   static const List<Color> galaxy = [
     black,

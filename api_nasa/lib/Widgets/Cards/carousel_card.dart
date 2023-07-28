@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../Color Palette/color_palette.dart';
+import '../../Uteis/Color Palette/color_palette.dart';
 
-class ButtonCard extends StatelessWidget {
+class CarouselCard extends StatelessWidget {
   final String image;
   final String title;
-  const ButtonCard({super.key, required this.image, required this.title});
+  const CarouselCard({super.key, required this.image, required this.title});
 
   @override
   Widget build(BuildContext context) {

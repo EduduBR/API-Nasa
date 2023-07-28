@@ -81,10 +81,13 @@ flutter:
    - assets/icons/terra.png
    - assets/icons/urano.png
    - assets/icons/venus.png
+   - assets/icons/erro.png
    
    - assets/animed/galaxy.json
    - assets/animed/loading.json
    - assets/animed/logo.json
+   - assets/animed/loadingimage.json
+   - assets/animed/circularloading.json
 
    - assets/image_planet/earth.jpg
    - assets/image_planet/jupiter.jpg
@@ -97,7 +100,7 @@ flutter:
    - assets/image_planet/venus.jpg
 
    - assets/terra.jpg
-   
+   - assets/marsrover.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

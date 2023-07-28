@@ -1,4 +1,5 @@
 import 'package:api_nasa/Model/Move/movement.dart';
+import 'package:api_nasa/Uteis/Theme/theme.dart';
 import 'package:api_nasa/View/Home/Screen/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,9 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Provider(
       create: (context) => Movement(),
-      child: const MaterialApp(
+      child:  MaterialApp(
+        theme: ThemeApp.appTheme,
         debugShowCheckedModeBanner: false,
-        home: HomePage()
+        home: const HomePage()
       ),
     );
   }
